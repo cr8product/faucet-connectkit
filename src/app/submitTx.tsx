@@ -1,4 +1,4 @@
-
+import ethers from 'ethers'
 import contractArtifact from '../../artifacts/contracts/Faucet.sol/Faucet.json'
 
 export default function submitTx() {
