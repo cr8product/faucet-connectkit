@@ -22,7 +22,7 @@ export default function Home() {
             <input type="text" placeholder={walletAddress} onChange={(e) => setWalletAddress(e.target.value)} className="input input-bordered input-primary w-full max-w-xs" />
           </div>
           <p className="py-6">By clicking the button below after you enter your wallet address <div className="badge badge-accent">0.2 ETH</div> allocated to your account and a transaction is initiated.</p>
-          <button className="btn btn-primary" onClick={() => submitTx}>Request Test Token</button>
+          <button className="btn btn-primary" onClick={() => submitTx(walletAddress)}>Request Test Token</button>
         </div>
       </div>
     </div>
