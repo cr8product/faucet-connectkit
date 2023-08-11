@@ -19,7 +19,7 @@ export default function Home() {
 
   async function submitTx() {
     const tx = await writeContract.requestTokens(0.2, walletAddress);
-    alert("Transaction submitted: ", tx.hash);
+    alert(`Transaction submitted: ", ${tx.hash}`);
   }
 
 
