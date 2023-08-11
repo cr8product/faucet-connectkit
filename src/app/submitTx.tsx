@@ -1,7 +1,7 @@
 import ethers from 'ethers'
 import contractArtifact from '../../artifacts/contracts/Faucet.sol/Faucet.json'
 
-export default function submitTx() {
+export default function submitTx(props: { walletAddress: string }) {
 
     const deployedContract = "0x8700f1aead6f9d10314993a10d6dd0047d4517d8";
     const privateKey = `0x` + process.env.DEPLOYER!
@@ -13,7 +13,7 @@ export default function submitTx() {
     const writeContract = new ethers.Contract(deployedContract, contractArtifact.abi, signer);
 
     async function submitTx() {
-        const tx = await writeContract.requestTokens(0.2, walletAddress);
+        const tx = await writeContract.requestTokens(0.2, props.walletAddress);
         alert(`Transaction submitted: ", ${tx.hash}`);
     }
 }
