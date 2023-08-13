@@ -27,6 +27,7 @@ export default function DonateToken() {
     return (
         <div>
             <button className='btn btn-primary' onClick={() => write({
+                value: parseEther("1")
             })}>Donate</button>
             {isLoading && <div>Check Wallet</div>}
             {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
