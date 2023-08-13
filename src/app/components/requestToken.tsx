@@ -12,7 +12,7 @@ import { InjectedConnector } from 'wagmi/connectors/injected'
 
 export default function RequestTokens() {
     const { address, isConnected } = useAccount()
-    const { data: ensName } = useEnsName({ address })
+    const userAddress = address;
     const { connect } = useConnect({
         connector: new InjectedConnector(),
     })
@@ -25,18 +25,23 @@ export default function RequestTokens() {
         abi: contractArtifact.abi,
         //functionName: 'donateTofaucet',
         functionName: 'requestTokens',
-        args: [address]
+        args: [userAddress,]
+
     })
+
+    const requestCoins = () => {
+
+        write()
+    }
 
 
     if (isConnected) {
         return (
             <div>
                 <button className='btn btn-secondary' onClick={() => disconnect()}>Disconnect</button>
-                - Connected to {ensName ?? address}
+                - Connected to {address}
                 <div>
-                    <button className='btn btn-primary' onClick={() => write({
-                    })}>Request Token</button>
+                    <button className='btn btn-primary' onClick={requestCoins}>Request Token</button>
                     {isLoading && <div>Check Wallet</div>}
                     {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
                 </div >
