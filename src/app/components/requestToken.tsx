@@ -20,7 +20,8 @@ export default function RequestTokens() {
 
 
     const { data, isLoading, isSuccess, write } = useContractWrite({
-        address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8',
+        //address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8', // Goerli Contract
+        address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8', // Mode Testnet Contract
         abi: contractArtifact.abi,
         //functionName: 'donateTofaucet',
         functionName: 'requestTokens',

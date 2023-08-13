@@ -13,7 +13,8 @@ export default function DonateToken() {
     const { address, isConnected } = useAccount()
 
     const { data, isLoading, isSuccess, write } = useContractWrite({
-        address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8',
+        //address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8',  // Goerli Testnet
+        address: '0x6538B04BD0EBc08e9a40b3178ceb04b9a80AE491', // Mode Testnet address
         abi: contractArtifact.abi,
         functionName: 'donateTofaucet',
         //functionName: 'requestTokens',
