@@ -12,7 +12,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     [mainnet, goerli, sepolia, modeTestnet],
     [
         //alchemyProvider({ apiKey: process.env.ALCHEMY_GOERLI_API_KEY! }),
-        infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_KEY! }),
+        //infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_KEY! }),
         jsonRpcProvider({
             rpc: (chain) => ({
                 http: `https://sepolia.mode.network/`,
