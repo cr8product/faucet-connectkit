@@ -1,7 +1,7 @@
 'use client'
 import { useAccount, useConnect, useDisconnect, useEnsName } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
-import RequestTokens from '../components/requestToken'
+import DonateToken from '../components/donateToken'
 
 export default function Donate() {
     const { address, isConnected } = useAccount()
@@ -17,7 +17,7 @@ export default function Donate() {
             <div>
                 <button className='btn btn-secondary' onClick={() => disconnect()}>Disconnect</button>
                 - Connected to {ensName ?? address}
-                <RequestTokens />
+                <DonateToken />
             </div>
 
         )
