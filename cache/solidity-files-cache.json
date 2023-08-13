@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/metoinside/Documents/mode-faucet/contracts/Faucet.sol": {
-      "lastModificationDate": 1691755285215,
-      "contentHash": "96369a349ade7ca105563f7c6520fb02",
+      "lastModificationDate": 1691858073855,
+      "contentHash": "eb75aa1c213b182da8efa23b6ccb8d59",
       "sourceName": "contracts/Faucet.sol",
       "solcConfig": {
         "version": "0.8.19",
