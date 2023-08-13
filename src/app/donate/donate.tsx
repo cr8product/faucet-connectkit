@@ -3,7 +3,7 @@ import { useAccount, useConnect, useDisconnect, useEnsName } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import RequestTokens from '../components/requestToken'
 
-export default function Profile() {
+export default function Donate() {
     const { address, isConnected } = useAccount()
     const { data: ensName } = useEnsName({ address })
     const { connect } = useConnect({

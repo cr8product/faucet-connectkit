@@ -7,7 +7,8 @@ export default function Navbar() {
                 <Link className="btn btn-ghost normal-case text-xl" href="/">Mode Testnet Faucet</Link>
             </div>
             <div className="navbar-center">
-                <Link href="/donate">Donate</Link>
+                <Link href="/">Faucet |</Link>
+                <Link href="/donate">|  Donate</Link>
             </div>
             <div className="navbar-end">
                 Built by the <Link href="https://www.cr8product.com/"> Cr8Product</Link> Team

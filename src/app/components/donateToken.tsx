@@ -9,15 +9,15 @@ import { parseEther } from 'viem'
 //functionName: 'requestTokens',
 
 
-export default function RequestTokens() {
+export default function DonateToken() {
     const { address, isConnected } = useAccount()
 
     const { data, isLoading, isSuccess, write } = useContractWrite({
         address: '0x8700f1aeaD6f9d10314993A10d6DD0047d4517d8',
         abi: contractArtifact.abi,
-        //functionName: 'donateTofaucet',
-        functionName: 'requestTokens',
-        args: [address]
+        functionName: 'donateTofaucet',
+        //functionName: 'requestTokens',
+        //args: [address]
     })
 
 
@@ -26,7 +26,7 @@ export default function RequestTokens() {
     return (
         <div>
             <button className='btn btn-primary' onClick={() => write({
-            })}>Request Token</button>
+            })}>Donate</button>
             {isLoading && <div>Check Wallet</div>}
             {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
         </div >
