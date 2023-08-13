@@ -1,4 +1,5 @@
-import Profile from "../donate/donate";
+import RequestTokens from "./requestToken";
+
 
 export default function HeroFaucet() {
     return (
@@ -8,7 +9,7 @@ export default function HeroFaucet() {
                     <h1 className="text-5xl font-bold">Hello there</h1>
                     <h6 className='text-2xl font-bold'>This is <kbd className="kbd kbd-lg">Mode Sepolia</kbd> Faucet</h6>
                     <p className="py-6">Enter your wallet address and get your daily <div className="badge badge-accent">0.2 Test ETH</div></p>
-                    <Profile />
+                    <RequestTokens />
                 </div>
             </div>
         </div>
