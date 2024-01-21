@@ -6,7 +6,11 @@ import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc'
+import { getDefaultConfig } from 'connectkit'
 
+
+const alchemyId = process.env.ALCHEMY_ID;
+const walletConnectProjectId = process.env.WALLETCONNECT_PROJECT_ID;
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
     [mainnet, goerli, sepolia, modeTestnet],
@@ -21,10 +25,14 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
         publicProvider()],
 )
 
-export const config = createConfig({
-    autoConnect: true,
-    connectors: [new InjectedConnector({ chains })],
-    publicClient,
-    webSocketPublicClient,
-})
+export const config = createConfig(
+    getDefaultConfig({
+        appName: "Faucet App",
+        alchemyId,
+        walletConnectProjectId,
+        autoConnect: true,
+        //connectors: [new InjectedConnector({ chains })],
+        //publicClient,
+        //webSocketPublicClient,
+    }))
 
