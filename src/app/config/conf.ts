@@ -13,7 +13,7 @@ const alchemyId = process.env.ALCHEMY_ID;
 const walletConnectProjectId = process.env.WALLETCONNECT_PROJECT_ID!;
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [mainnet, goerli, sepolia, modeTestnet],
+    [sepolia, modeTestnet],
     [
         //alchemyProvider({ apiKey: process.env.ALCHEMY_GOERLI_API_KEY! }),
         //infuraProvider({ apiKey: process.env.NEXT_PUBLIC_INFURA_KEY! }),
