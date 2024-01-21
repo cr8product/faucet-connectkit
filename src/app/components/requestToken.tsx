@@ -39,8 +39,7 @@ export default function RequestTokens() {
     if (isConnected) {
         return (
             <div>
-                <button className='btn btn-secondary' onClick={() => disconnect()}>Disconnect</button>
-                - Connected to {address}
+                <ConnectKitButton />
                 <div>
                     <button className='btn btn-primary' onClick={requestCoins}>Request Token</button>
                     {isLoading && <div>Check Wallet</div>}
