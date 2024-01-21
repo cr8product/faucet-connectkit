@@ -30,6 +30,7 @@ export const config = createConfig(
         appName: "Faucet App",
         alchemyId,
         walletConnectProjectId,
+        chains,
         autoConnect: true,
         //connectors: [new InjectedConnector({ chains })],
         //publicClient,
