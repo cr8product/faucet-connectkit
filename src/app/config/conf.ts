@@ -1,4 +1,4 @@
-import { configureChains, createConfig, mainnet, sepolia } from 'wagmi'
+import { configureChains, createConfig, mainnet, sepolia, WagmiConfig } from 'wagmi'
 import { goerli } from 'viem/chains'
 import { publicProvider } from 'wagmi/providers/public'
 import { modeTestnet } from './modetestnet'
@@ -27,3 +27,4 @@ export const config = createConfig({
     publicClient,
     webSocketPublicClient,
 })
+
