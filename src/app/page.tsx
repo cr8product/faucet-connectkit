@@ -21,7 +21,6 @@ export default function Home() {
       <ConnectKitProvider>
         <HeroFaucet />
       </ConnectKitProvider>
-
     </WagmiConfig>
   )
 }

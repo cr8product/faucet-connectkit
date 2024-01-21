@@ -3,6 +3,7 @@ import contractArtifact from '../../../artifacts/contracts/Faucet.sol/Faucet.jso
 import { useContractRead, useEnsName, useConnect, useDisconnect } from 'wagmi'
 import { parseEther } from 'viem'
 import { InjectedConnector } from 'wagmi/connectors/injected'
+import { ConnectKitButton } from "connectkit";
 
 
 //address: '0x6538B04BD0EBc08e9a40b3178ceb04b9a80AE491',
@@ -49,5 +50,5 @@ export default function RequestTokens() {
 
         )
     }
-    return <button className='btn btn-warning' onClick={() => connect()}>Connect Wallet</button>
+    return <ConnectKitButton />
 }

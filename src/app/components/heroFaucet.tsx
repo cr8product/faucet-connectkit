@@ -1,4 +1,3 @@
-import { ConnectKitButton } from "connectkit";
 import RequestTokens from "./requestToken";
 
 
@@ -11,7 +10,6 @@ export default function HeroFaucet() {
                     <h6 className='text-2xl font-bold'>This is <kbd className="kbd kbd-lg">Mode Sepolia</kbd> Faucet</h6>
                     <p className="py-6">Enter your wallet address and get your daily <div className="badge badge-accent">0.2 Test ETH</div></p>
                     <RequestTokens />
-                    <ConnectKitButton />
                 </div>
             </div>
         </div>
